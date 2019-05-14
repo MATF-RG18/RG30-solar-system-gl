@@ -17,9 +17,9 @@ U slucaju kolizije komete sa:
     - kada budu unistene sve planete pri sledecom kolizijom komete sa Suncem: Sunce eksplodira - kraj simulacije. 
 
 Upravlja se sledecim tasterima:
-  - 'G': pokrece se animacija,
-  - 'S': objektima se dodeljuju boje,
-  - '+': ubrazava se rotacija planeta oko Sunca,
-  - '-': usporava se rotacija planeta oko Sunca,
-  - 'P': pauzira se simulacija.
+  - 'G' : pokrece se animacija,
+  - 'S' : objektima se dodeljuju boje,
+  - '+' : ubrazava se rotacija planeta oko Sunca,
+  - '-' : usporava se rotacija planeta oko Sunca,
+  - 'P' : pauzira se simulacija.
   
