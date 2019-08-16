@@ -412,8 +412,7 @@ static void createPlanet(int i){
     float angle = rand()%180;
     int satelites = 10;
 
-    //Kodirao sam ovaj deo sa duplom petljom i 
-    //globalnim promenljivama ali se sporo izvrsava
+    //Dodavanje satelita planetama
     switch(i){
         case 0: //Sunce nema satelite 
                 break;
@@ -786,7 +785,7 @@ static void on_timer(int value)
         }
     }
 
-    //Animira se kometa
+    //Animiraju se komete
     float t;
     float spot_x, spot_y, spot_z;
 
@@ -905,11 +904,11 @@ static void crashObjects(float cx, float cy, float cz, int cj){
             comets[comet_on].draw = 0;
 
             //i != 0 stitimo Sunce
-
+		
             //Ako je boja planete - plava
             if(i != 0 && planets[i].color == 'b'){
                
-                //Kometa postaje njen satelit < ne dozvoljava se vise od 9 satelita po planeti >
+                //Kometa postaje njen satelit - ne dozvoljava se vise od 9 satelita po planeti
                 planets[i].has_satelite >= 9 ? planets[i].has_satelite = 9 : planets[i].has_satelite++;
                 
                 printf("PLAVA - Kreiran je satelit: %d na planeti: %s\n", 
@@ -1065,7 +1064,7 @@ static void drawObjects(){
                     //Iscrtavaju se prirodni sateliti planeta
                     setSatelite(i);
 
-                    //Kreiraju se < ili brisu > "vestacki" sateliti
+                    //Kreiraju se - ili brisu - "vestacki" sateliti
                     createDeleteSatelite(i);           
                 }
             glPopMatrix();
@@ -1142,8 +1141,6 @@ static void setSatelite(int i){
             europa_radius = 80, ganimed_radius = 150, kalipso_radius = 100, 
             kalipsa_radius = 100, titan_radius = 80, atlas_radius = 90;
 
-    //Kodirao sam ovaj deo sa duplom petljom i 
-    //globalnim promenljivama ali se sporo izvrsava
     switch(i){
         case 0: //Sunce nestaje kada su unistene sve planete 
                 break;
@@ -1329,8 +1326,6 @@ static void createDeleteSatelite(int i){
     float angle = -40;
     int satelites = planets[i].has_satelite - planets[i].natural_satelite;
 
-    //Kodirao sam ovaj deo sa duplom petljom i 
-    //globalnim promenljivama ali se sporo izvrsava
     switch(i){
         case 0: //Sunce nema satelite 
                 break;
@@ -1499,7 +1494,7 @@ static void drawCyrcle(float radius){
                                 sin(2 * i * PI / DOTS) * radius
                               );
                 }
-                //Inace
+                //Nakon kreiranja planeta
                 else
                 {
                     glColor3f(r*sin(i), g*tan(i), b*cos(i));
