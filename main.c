@@ -1175,7 +1175,7 @@ static void setSatelite(int i){
                 glPopMatrix();
             }
 
-            if(planets[3].has_satelite >= 1){
+            if(planets[4].has_satelite >= 1){
                 
                 glPushMatrix();
                     glRotatef(demos_revolution/demos_rev, 0, 0, 1);
@@ -1464,14 +1464,14 @@ static void drawComets(){
 
         if(comets[i].draw){
 
-			glPushMatrix();
+		glPushMatrix();
 				
-                glTranslatef(comets[i].x, comets[i].y, comets[i].z);
-                glColor3f(sun_r, sun_g, 0);
-                glutSolidSphere(comets[i].radius, 125, 125);   
+			glTranslatef(comets[i].x, comets[i].y, comets[i].z);
+			glColor3f(sun_r, sun_g, 0);
+			glutSolidSphere(comets[i].radius, 125, 125);   
                 
-			glPopMatrix();
-		}
+		glPopMatrix();
+	}
     }
 }
 
